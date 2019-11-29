@@ -1,9 +1,9 @@
 import sys
 import requests
 
-key = input("Введите ваш API ключ:")
-token = input("Введите ваш токен:")
-board_id = input("Введите ID доски:")
+key = input("Введите ваш API ключ:\n")
+token = input("Введите ваш токен:\n")
+board_id = input("Введите ID доски:\n")
 
 auth_params = {
     'key': key,
@@ -25,7 +25,7 @@ def read():
             print('\t' + 'Нет задач!')
             continue
         for task in task_data:
-            print('\t' + task['name'] + '\t' + task['id'])
+            print('\t' + task['name'])
 
 
 def create(name, column_name):
